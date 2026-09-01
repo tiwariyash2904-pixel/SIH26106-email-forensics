@@ -1,0 +1,12 @@
+From: test@example.com
+To: investigator@example.com
+Subject: SIH26106 Test Email
+Date: Tue, 1 Sep 2026 15:00:00 +0530
+Reply-To: reply@example.com
+Return-Path: <test@example.com>
+Message-ID: <test123@example.com>
+Received: from mail.example.com (192.0.2.10)
+    by mail.receiver.com;
+Content-Type: text/plain; charset="UTF-8"
+
+This is a harmless test email for SIH26106.

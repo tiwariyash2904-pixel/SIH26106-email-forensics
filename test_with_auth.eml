@@ -1,0 +1,49 @@
+From: test@example.com
+To: investigator@example.com
+Subject: SIH26106 Auth Header Test
+User-Agent: Mozilla Thunderbird 115.0
+Authentication-Results: mx.example.com; spf=pass
+ smtp.mailfrom=test@example.com; dkim=pass header.i=@example.com; dmarc=pass
+ (p=REJECT) header.from=example.com
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============7135105076925014435=="
+
+--===============7135105076925014435==
+Content-Type: multipart/alternative;
+ boundary="===============3043047087884168450=="
+
+--===============3043047087884168450==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+This is a harmless plain-text test email.
+
+Please visit:
+https://example.com/login
+
+--===============3043047087884168450==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+
+    <html>
+      <body>
+        <p>This is a harmless HTML test email.</p>
+        <p>Please visit: <a href=3D"https://example.com/login-html">this link=
+</a></p>
+      </body>
+    </html>
+   =20
+
+--===============3043047087884168450==--
+
+--===============7135105076925014435==
+Content-Type: text/plain
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="test_attachment.txt"
+MIME-Version: 1.0
+
+VGhpcyBpcyBhIGhhcm1sZXNzIFNJSDI2MTA2IHRlc3QgYXR0YWNobWVudC4=
+
+--===============7135105076925014435==--
